@@ -121,7 +121,7 @@ body{
 
 
 .homestart{
-  height: 120vh;
+  height: 120%;
   background-image: url(../assets/img/homePageHeader.png);
   background-size: cover;
   display: flex;
@@ -137,7 +137,7 @@ body{
   
 }
 .navbar{
-  height: 13vh;
+  height: 13%;
   display: flex;
   flex-direction: row;
   margin-top: 2%;
@@ -188,7 +188,7 @@ justify-content: space-between;
 
 .search-container {
     position: relative;
-    width: 300px;
+    width: 30%;
 }
 .search-input {
     width: 100%;
@@ -224,7 +224,7 @@ margin-left: 5%;
 }
 
 .homefeuteredtrip{
-  height: 110vh;
+  height: 110%;
   background-color: rgb(66, 5, 123);
   background-size: cover;
   display: flex;
@@ -499,13 +499,13 @@ margin-left: 5%;
   justify-content: space-between;
 }
 
-.baftxt{
+.contacttxt{
   
   font-size: 48px;
   font-family: 'Portersans',sans-serif;
   color: rgb(255, 255, 255);
-  margin-left: 5%;
-  text-align: center;
+  margin-left: 38%;
+  align-content: flex-start;
   margin-bottom: 5%;
 }
 
@@ -900,7 +900,7 @@ hr {
   width: 15%;
 }
 
-.greg{
+.button{
   display: flex;
   justify-content: end;
   margin-right: 2%;
