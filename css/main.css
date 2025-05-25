@@ -137,7 +137,7 @@ body{
   
 }
 .navbar{
-  height: 13%;
+  height: 70px;
   display: flex;
   flex-direction: row;
   margin-top: 2%;
@@ -149,8 +149,8 @@ body{
   border-bottom-left-radius: 30px;
   background-color: rgba(240, 248, 255, 0.625);
   justify-content: space-between;
-
 }
+
 
 .navbar div {
   display: flex;
@@ -186,18 +186,240 @@ justify-content: space-between;
   color: black;
 }
 
-.search-container {
-    position: relative;
-    width: 30%;
+
+.fa-solid fa-basket-shopping{
+  border-radius: 20px;
+  border: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 25px;
 }
-.search-input {
-    width: 100%;
-    padding: 10px 40px 10px 10px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    outline: none;
+
+.fa-solid fa-basket-shopping:active{
+  opacity: 0.8;
 }
+
+
+.modal1 {
+  background-color: #4a0082;
+  opacity: 0;
+  position: fixed;
+  border-radius: 20px;
+  top: 25%;
+  left: 25%;
+  right: 25%;
+  bottom: 25%;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal1.open {
+  opacity: 1;
+  z-index: 999;
+}
+.modal1Inner {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  padding: 30px 25px;
+  text-align: center;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px; /* Set a fixed height for layout control */
+}
+
+.modal1Inner h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.modal1Inner p {
+  line-height: 24px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+#closeModal1 {
+  margin-top: auto;
+  align-self: center;
+  background-color: #4a0082;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#closeModal1:hover {
+  background-color: #370062;
+}
+
+
+
+
+
+.submit {
+  background-color: #4a0082;
+  opacity: 0;
+  position: fixed;
+  border-radius: 20px;
+  top: 25%;
+  left: 25%;
+  right: 25%;
+  bottom: 25%;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit.open {
+  opacity: 1;
+  z-index: 999;
+}
+.modal2Inner {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  padding: 30px 25px;
+  text-align: center;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px; /* Set a fixed height for layout control */
+}
+
+.modal2Inner h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.modal2Inner p {
+  line-height: 24px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+#closeSubmit {
+  margin-top: auto;
+  align-self: center;
+  background-color: #4a0082;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#closeSubmit:hover {
+  background-color: #370062;
+}
+
+
+
+
+
+
+
+
+.selectBox ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.selectBox button{
+  background-color: white;
+  width: 20%;
+  border-radius: 0;
+  color: #000000;
+ 
+}
+
+.container {
+  border-radius: 8px;
+}
+
+.selectBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.selected {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 55%;
+  width: 150px;
+  border-radius: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid black;
+  color: #000000;
+}
+
+.flightOptions {
+  background-color: crimson;
+  color: white;
+  margin-top: 55%;
+  opacity: 0;
+  transition: all 0.5s;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.flightOptions.active {
+  margin-top: 300px;
+  margin-right: 100px;
+  max-height: 240px;
+  border: 1px solid white;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.flightOptions::-webkit-scrollbar{
+  width: 8px;
+  background: white;
+  border-radius: 0 8px 8px 0;
+}
+
+.flightOptions::-webkit-scrollbar-thumb{
+  background: #4b0076;
+  border-radius: 0 8px 8px 0;
+}
+
+.option{
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.option:hover{
+  background: #4b0076;
+  color: white;
+}
+
+
+
+
+
 
 .bottomtxthome{
   display: flex;
@@ -1070,3 +1292,5 @@ button {
   transition: background-color 0.3s;
   position: relative;
 }
+
+
